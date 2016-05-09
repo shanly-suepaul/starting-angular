@@ -1,7 +1,11 @@
 define([
-    'angular'
+    'angular',
+
+    'ua-parser-js'
 ], function (
-    ng
+    ng,
+
+    UAParser
 ) {
     'use strict';
 
@@ -15,5 +19,10 @@ define([
         $interval(function () {
             $rootScope.now = new Date();
         }, 60000);
+
+        var parser = new UAParser();
+        var browser = parser.getBrowser();
+
+        $rootScope.isIE9 = browser.name === 'IE' && browser.version === '9.0';
     } ]);
 });
