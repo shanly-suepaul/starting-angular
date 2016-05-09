@@ -1,7 +1,9 @@
 define([
     'angular',
 
-    'ua-parser-js'
+    'ua-parser-js',
+
+    './mainHeader/mainHeader'
 ], function (
     ng,
 
@@ -10,6 +12,7 @@ define([
     'use strict';
 
     var app = ng.module('app', [
+        'app.mainHeader'
     ]);
 
     app.run([ '$rootScope', '$interval', function ($rootScope, $interval) {

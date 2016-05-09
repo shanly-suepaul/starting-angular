@@ -7,7 +7,8 @@ requirejs.config({
     baseUrl: 'src',
     paths: {
         'angular': '../bower_components/angular/angular',
-        'ua-parser-js': '../bower_components/ua-parser-js/src/ua-parser'
+        'ua-parser-js': '../bower_components/ua-parser-js/src/ua-parser',
+        'text': '../bower_components/requirejs-text/text'
     },
     shim: {
         'angular': {
